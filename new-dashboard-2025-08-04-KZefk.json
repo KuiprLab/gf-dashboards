@@ -284,6 +284,16 @@
           ],
           "query": "",
           "type": "textbox"
+        },
+        {
+          "baseFilters": [],
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "filters": [],
+          "name": "Filters",
+          "type": "adhoc"
         }
       ]
     },
