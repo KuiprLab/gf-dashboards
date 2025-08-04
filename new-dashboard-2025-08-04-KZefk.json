@@ -55,7 +55,7 @@
         },
         "gridPos": {
           "h": 3,
-          "w": 6,
+          "w": 11,
           "x": 0,
           "y": 0
         },
@@ -92,6 +92,74 @@
           }
         ],
         "title": "Number of Logs",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "loki",
+          "uid": "P8E80F9AEF21F6940"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 13,
+          "x": 11,
+          "y": 0
+        },
+        "id": 3,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "area",
+          "justifyMode": "auto",
+          "orientation": "auto",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "12.2.0-257444",
+        "targets": [
+          {
+            "datasource": {
+              "type": "loki",
+              "uid": "P8E80F9AEF21F6940"
+            },
+            "direction": "backward",
+            "editorMode": "builder",
+            "expr": "sum(count_over_time({service_name=\"$container\", stream=~\"$stream\"} |~ `(?i)$search` [$__auto]))",
+            "queryType": "range",
+            "refId": "A"
+          }
+        ],
+        "title": "New panel",
         "type": "stat"
       },
       {
@@ -200,19 +268,19 @@
         },
         {
           "current": {
-            "text": "",
-            "value": ""
+            "text": "Check",
+            "value": "Check"
           },
           "label": "Search",
           "name": "search",
           "options": [
             {
               "selected": true,
-              "text": "",
-              "value": ""
+              "text": "Check",
+              "value": "Check"
             }
           ],
-          "query": "",
+          "query": "Check",
           "type": "textbox"
         }
       ]
