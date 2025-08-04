@@ -86,7 +86,7 @@
             },
             "direction": "backward",
             "editorMode": "builder",
-            "expr": "sum(count_over_time({service_name=\"$container\"} [$__auto]))",
+            "expr": "sum(count_over_time({service_name=\"$container\", stream=~\"$stream\"} [$__auto]))",
             "queryType": "range",
             "refId": "A"
           }
@@ -129,8 +129,8 @@
               "uid": "P8E80F9AEF21F6940"
             },
             "direction": "backward",
-            "editorMode": "builder",
-            "expr": "{service_name=\"$container\"} |= ``",
+            "editorMode": "code",
+            "expr": "{service_name=\"$container\", stream=~\"$stream\"} |~ \"(?i)$search\"",
             "queryType": "range",
             "refId": "A"
           }
@@ -172,10 +172,10 @@
         {
           "current": {
             "text": [
-              "stderr"
+              "stdout"
             ],
             "value": [
-              "stderr"
+              "stdout"
             ]
           },
           "datasource": {
@@ -197,6 +197,23 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
+        },
+        {
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "label": "Search",
+          "name": "search",
+          "options": [
+            {
+              "selected": true,
+              "text": "",
+              "value": ""
+            }
+          ],
+          "query": "",
+          "type": "textbox"
         }
       ]
     },
