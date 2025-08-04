@@ -175,7 +175,7 @@
             "useBackend": false
           }
         ],
-        "title": "Currently Banned IPs",
+        "title": "Currently Banned IPs Amount",
         "type": "stat"
       },
       {
