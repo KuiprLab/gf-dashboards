@@ -68,7 +68,7 @@
           "percentChangeColorMode": "standard",
           "reduceOptions": {
             "calcs": [
-              "lastNotNull"
+              "sum"
             ],
             "fields": "",
             "values": false
@@ -86,7 +86,7 @@
             },
             "direction": "backward",
             "editorMode": "code",
-            "expr": "sum(count_over_time(({service_name=\"$container\"})[$__interval])) by (stream)",
+            "expr": "sum(count_over_time(({service_name=\"$container\",stream=~\"$stream\"})[$__interval])) by (stream)",
             "queryType": "range",
             "refId": "A"
           }
@@ -130,13 +130,13 @@
         "id": 3,
         "options": {
           "colorMode": "value",
-          "graphMode": "area",
+          "graphMode": "none",
           "justifyMode": "auto",
           "orientation": "auto",
           "percentChangeColorMode": "standard",
           "reduceOptions": {
             "calcs": [
-              "lastNotNull"
+              "sum"
             ],
             "fields": "",
             "values": false
@@ -153,13 +153,13 @@
               "uid": "P8E80F9AEF21F6940"
             },
             "direction": "backward",
-            "editorMode": "builder",
-            "expr": "sum(count_over_time({service_name=\"$container\", stream=~\"$stream\"} |~ `(?i)$search` [$__auto]))",
+            "editorMode": "code",
+            "expr": "sum(count_over_time({service_name=\"$container\",stream=~\"$stream\"} |~ `(?i)$search` [$__auto]))",
             "queryType": "range",
             "refId": "A"
           }
         ],
-        "title": "New panel",
+        "title": "Number of Filtered Logs",
         "type": "stat"
       },
       {
