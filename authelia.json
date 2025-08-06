@@ -1320,11 +1320,20 @@
           "refresh": 1,
           "regex": "",
           "type": "query"
+        },
+        {
+          "baseFilters": [],
+          "datasource": {
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "filters": [],
+          "name": "Filters",
+          "type": "adhoc"
         }
       ]
     },
     "time": {
-      "from": "now-30m",
+      "from": "now-24h",
       "to": "now"
     },
     "timepicker": {},
