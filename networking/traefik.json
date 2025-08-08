@@ -1407,6 +1407,19 @@
         ],
         "title": "HTTP Details",
         "type": "row"
+      },
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 19
+        },
+        "id": 25,
+        "panels": [],
+        "title": "Access Logging",
+        "type": "row"
       }
     ],
     "preload": false,
@@ -1530,7 +1543,7 @@
       ]
     },
     "time": {
-      "from": "now-6h",
+      "from": "now-24h",
       "to": "now"
     },
     "timepicker": {},
