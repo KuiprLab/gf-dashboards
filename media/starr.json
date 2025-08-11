@@ -4330,29 +4330,6 @@
         {
           "current": {
             "text": "All",
-            "value": "$__all"
-          },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
-          "definition": "label_values({__name__=~\"sabnzbd_.*\"},instance)",
-          "includeAll": true,
-          "label": "SABnzbd Instance",
-          "multi": true,
-          "name": "sabnzbd_instance",
-          "options": [],
-          "query": {
-            "query": "label_values({__name__=~\"sabnzbd_.*\"},instance)",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 2,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "All",
             "value": [
               "$__all"
             ]
@@ -4419,52 +4396,6 @@
           "options": [],
           "query": {
             "query": "label_values({__name__=~\"lidarr_.*\"},instance)",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 2,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "All",
-            "value": "$__all"
-          },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
-          "definition": "label_values({__name__=~\"readarr_.*\"},instance)",
-          "includeAll": true,
-          "label": "Readarr Instance",
-          "multi": true,
-          "name": "readarr_instance",
-          "options": [],
-          "query": {
-            "query": "label_values({__name__=~\"readarr_.*\"},instance)",
-            "refId": "PrometheusVariableQueryEditor-VariableQuery"
-          },
-          "refresh": 2,
-          "regex": "",
-          "type": "query"
-        },
-        {
-          "current": {
-            "text": "All",
-            "value": "$__all"
-          },
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${DS_PROMETHEUS}"
-          },
-          "definition": "label_values({__name__=~\"bazarr_.*\"},instance)",
-          "includeAll": true,
-          "label": "Bazarr Instance",
-          "multi": true,
-          "name": "bazarr_instance",
-          "options": [],
-          "query": {
-            "query": "label_values({__name__=~\"bazarr_.*\"},instance)",
             "refId": "PrometheusVariableQueryEditor-VariableQuery"
           },
           "refresh": 2,
