@@ -186,7 +186,7 @@
           "showCommonLabels": false,
           "showLabels": false,
           "showTime": true,
-          "sortOrder": "Ascending",
+          "sortOrder": "Descending",
           "wrapLogMessage": true
         },
         "pluginVersion": "12.2.0-257444",
@@ -196,7 +196,7 @@
               "type": "loki",
               "uid": "P8E80F9AEF21F6940"
             },
-            "direction": "forward",
+            "direction": "backward",
             "editorMode": "code",
             "expr": "{service_name=\"$container\", stream=~\"$stream\"} |~ \"(?i)$search\"",
             "queryType": "range",
@@ -209,6 +209,7 @@
       }
     ],
     "preload": false,
+    "refresh": "auto",
     "schemaVersion": 41,
     "tags": [],
     "templating": {
