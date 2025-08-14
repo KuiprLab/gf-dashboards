@@ -186,7 +186,7 @@
           "showCommonLabels": false,
           "showLabels": false,
           "showTime": true,
-          "sortOrder": "Descending",
+          "sortOrder": "Ascending",
           "wrapLogMessage": true
         },
         "pluginVersion": "12.2.0-257444",
@@ -196,7 +196,7 @@
               "type": "loki",
               "uid": "P8E80F9AEF21F6940"
             },
-            "direction": "backward",
+            "direction": "forward",
             "editorMode": "code",
             "expr": "{service_name=\"$container\", stream=~\"$stream\"} |~ \"(?i)$search\"",
             "queryType": "range",
@@ -215,8 +215,8 @@
       "list": [
         {
           "current": {
-            "text": "authelia",
-            "value": "authelia"
+            "text": "minecraft-server-mc",
+            "value": "minecraft-server-mc"
           },
           "datasource": {
             "type": "loki",
